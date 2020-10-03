@@ -59,7 +59,7 @@ THIRD_PARTY_APPS = [
     "drf_spectacular",
 ]
 
-LOCAL_APPS = []
+LOCAL_APPS = ["users.apps.UsersConfig", "product.apps.ProductConfig"]
 
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -90,6 +90,9 @@ AUTHENTICATION_BACKENDS = (
     "django.contrib.auth.backends.ModelBackend",
     "allauth.account.auth_backends.AuthenticationBackend",
 )
+
+# https://docs.djangoproject.com/en/dev/ref/settings/#auth-user-model
+AUTH_USER_MODEL = "users.CustomUser"
 
 # https://docs.djangoproject.com/en/dev/ref/settings/#login-redirect-url
 LOGIN_REDIRECT_URL = "/"
@@ -247,7 +250,7 @@ DATABASES = {
 # LOGGER
 # ------------------------------------------------------------------------------
 LOG_DATE_FORMAT = timezone.now().strftime("%B %d, %Y")
-BASE_DIR.joinpath("logs").mkdir(parents=True, exist_ok=False)
+BASE_DIR.joinpath("logs").mkdir(parents=True, exist_ok=True)
 CONSOLE_LOGGING_FILE = BASE_DIR.joinpath(f"logs/django_{LOG_DATE_FORMAT}.log")
 
 LOGGING = {
@@ -296,6 +299,7 @@ LOGGING = {
 REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": (
         "rest_framework.authentication.SessionAuthentication",
+        "rest_framework.authentication.TokenAuthentication",
         "dj_rest_auth.utils.JWTCookieAuthentication",
     ),
     "DEFAULT_PERMISSION_CLASSES": ("rest_framework.permissions.AllowAny",),

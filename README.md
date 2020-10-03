@@ -3,6 +3,9 @@
 >
 > See the list of Known Issues and TODOs, below, for updates.
 
+[Online Documentation](https://mohamed-kaizen.github.io/IWork-test/)
+
+
 ## Overview
 
 A test by IWork
@@ -56,4 +59,4 @@ enjoy :)
 # License: MIT
 
 
-[IWrok Test]: https://github.com/Mohamed-Kaizen/iwrok_test
+[IWrok Test]: https://github.com/Mohamed-Kaizen/IWork-test

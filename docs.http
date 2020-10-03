@@ -1,0 +1,108 @@
+### Sign Up
+POST http://127.0.0.1:8000/api/users/signup/
+Content-Type: application/json
+
+{
+  "username": "iwork",
+  "password": "123456789iwork",
+  "email": "iwork@iwork.com",
+  "full_name": "iwork"
+}
+
+
+### Sign In
+POST http://127.0.0.1:8000/api/users/signin/
+Content-Type: application/x-www-form-urlencoded
+
+username=iwork&password=123456789iwork
+
+
+> {% client.global.set("token", response.body.token); %}
+
+
+### Create new item
+POST http://127.0.0.1:8000/api/products/
+Content-Type: application/json
+Authorization: Token {{token}}
+
+{
+  "name": "sdsad",
+  "quantity": 4545
+}
+
+### Get all items
+GET http://127.0.0.1:8000/api/products/
+Content-Type: application/json
+
+> {% client.global.set("item_slug", response.body[0].slug); %}
+
+
+### item detail
+GET http://127.0.0.1:8000/api/products/{{item_slug}}/
+Content-Type: application/json
+
+
+### item update
+PATCH http://127.0.0.1:8000/api/products/{{item_slug}}/
+Content-Type: application/json
+Authorization: Token {{token}}
+
+{
+  "quantity": 1000
+}
+
+
+### item delete
+DELETE http://127.0.0.1:8000/api/products/{{item_slug}}/
+Content-Type: application/json
+Authorization: Token {{token}}
+
+
+### Sign Up with dj-rest-auth
+POST http://127.0.0.1:8000/api/users/register/
+Content-Type: application/json
+
+{
+  "username": "iwork2",
+  "password1": "123456789iwork",
+  "password2": "123456789iwork",
+  "email": "iwork2@iwork.com",
+  "full_name": "iwork2"
+}
+
+
+### Sign In with dj-rest-auth
+POST http://127.0.0.1:8000/api/users/login/
+Content-Type: application/json
+
+{
+  "password": "123456789iwork",
+  "email": "iwork2@iwork.com"
+}
+
+> {% client.global.set("access_token", response.body.access_token); %}
+
+### Create new item with dj-rest-auth
+POST http://127.0.0.1:8000/api/products/
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+
+{
+  "name": "sdsad",
+  "quantity": 4545
+}
+
+### item update with dj-rest-auth
+PATCH http://127.0.0.1:8000/api/products/{{item_slug}}/
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+
+{
+  "quantity": 50000
+}
+
+
+### item delete with dj-rest-auth
+DELETE http://127.0.0.1:8000/api/products/{{item_slug}}/
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
