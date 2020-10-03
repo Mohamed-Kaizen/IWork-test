@@ -1,46 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
-     <loc>https://example.com/</loc>
+     <loc>https://mohamed-kaizen.github.io/IWork-test/</loc>
      <lastmod>2020-10-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://example.com/installation/</loc>
+     <loc>https://mohamed-kaizen.github.io/IWork-test/installation/</loc>
      <lastmod>2020-10-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://example.com/command/</loc>
+     <loc>https://mohamed-kaizen.github.io/IWork-test/command/</loc>
      <lastmod>2020-10-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://example.com/reference/product/models/</loc>
+     <loc>https://mohamed-kaizen.github.io/IWork-test/reference/product/models/</loc>
      <lastmod>2020-10-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://example.com/reference/product/utils/</loc>
+     <loc>https://mohamed-kaizen.github.io/IWork-test/reference/product/utils/</loc>
      <lastmod>2020-10-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://example.com/reference/users/adapter/</loc>
+     <loc>https://mohamed-kaizen.github.io/IWork-test/reference/users/adapter/</loc>
      <lastmod>2020-10-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://example.com/reference/users/context_processors/</loc>
+     <loc>https://mohamed-kaizen.github.io/IWork-test/reference/users/context_processors/</loc>
      <lastmod>2020-10-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://example.com/reference/users/forms/</loc>
+     <loc>https://mohamed-kaizen.github.io/IWork-test/reference/users/forms/</loc>
      <lastmod>2020-10-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://example.com/reference/users/models/</loc>
+     <loc>https://mohamed-kaizen.github.io/IWork-test/reference/users/models/</loc>
      <lastmod>2020-10-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://example.com/reference/users/validators/</loc>
+     <loc>https://mohamed-kaizen.github.io/IWork-test/reference/users/validators/</loc>
      <lastmod>2020-10-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://example.com/reference/users/views/</loc>
+     <loc>https://mohamed-kaizen.github.io/IWork-test/reference/users/views/</loc>
      <lastmod>2020-10-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
