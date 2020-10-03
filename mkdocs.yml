@@ -1,0 +1,65 @@
+site_name: IWrok Test
+site_url: https://example.com
+site_author: Mohamed Nesredin
+site_description: >-
+  A test by IWork
+
+repo_name: Mohamed-Kaizen/iwrok-test
+repo_url: https://github.com/Mohamed-Kaizen/iwrok-test/
+edit_uri: https://github.com/Mohamed-Kaizen/iwrok-test/docs/
+
+copyright: Copyright &copy; 2020 Mohamed Nesredin
+
+theme:
+  name: material
+  icon:
+    repo: fontawesome/brands/github-alt
+  features:
+    - tabs
+
+plugins:
+  - search
+  - minify:
+      minify_html: true
+  - git-revision-date-localized:
+      type: timeago
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          setup_commands:
+            - import os
+            - import django
+            - os.environ.setdefault("DJANGO_SETTINGS_MODULE", "iwrok_test.settings")
+            - django.setup()
+          rendering:
+            show_source: true
+      watch:
+        - iwrok_test
+
+nav:
+ - Home: 'index.md'
+
+
+markdown_extensions:
+  - admonition
+  - codehilite:
+      linenums: true
+  - toc:
+      permalink: true
+  - pymdownx.superfences:
+      custom_fences:
+          - name: mermaid
+            class: mermaid
+            format: !!python/name:pymdownx.superfences.fence_div_format
+  - pymdownx.tabbed
+  - pymdownx.details
+
+extra_css:
+    - 'css/termynal.css'
+    - 'css/custom.css'
+
+extra_javascript:
+    - 'js/mermaid.min.js'
+    - 'js/termynal.js'
+    - 'js/custom.js'
