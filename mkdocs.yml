@@ -4,9 +4,9 @@ site_author: Mohamed Nesredin
 site_description: >-
   A test by IWork
 
-repo_name: Mohamed-Kaizen/iwrok-test
-repo_url: https://github.com/Mohamed-Kaizen/iwrok-test/
-edit_uri: https://github.com/Mohamed-Kaizen/iwrok-test/docs/
+repo_name: Mohamed-Kaizen/IWork-test
+repo_url: https://github.com/Mohamed-Kaizen/IWork-test/
+edit_uri: https://github.com/Mohamed-Kaizen/IWork-test/docs/
 
 copyright: Copyright &copy; 2020 Mohamed Nesredin
 
@@ -15,7 +15,7 @@ theme:
   icon:
     repo: fontawesome/brands/github-alt
   features:
-    - tabs
+    - navigation.tabs
 
 plugins:
   - search
@@ -36,9 +36,24 @@ plugins:
             show_source: true
       watch:
         - iwrok_test
+        - users
+        - product
 
 nav:
- - Home: 'index.md'
+  - Home: 'index.md'
+  - Installation: 'installation.md'
+  - Command: 'command.md'
+  - Reference:
+      - product:
+          - Models: "reference/product/models.md"
+          - Utils: "reference/product/utils.md"
+      - Users:
+          - Adapter: "reference/users/adapter.md"
+          - Context Processors: "reference/users/context_processors.md"
+          - Forms: "reference/users/forms.md"
+          - Models: "reference/users/models.md"
+          - Validators: "reference/users/validators.md"
+          - Views: "reference/users/views.md"
 
 
 markdown_extensions:
@@ -54,6 +69,7 @@ markdown_extensions:
             format: !!python/name:pymdownx.superfences.fence_div_format
   - pymdownx.tabbed
   - pymdownx.details
+
 
 extra_css:
     - 'css/termynal.css'

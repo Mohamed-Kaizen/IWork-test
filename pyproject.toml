@@ -7,7 +7,7 @@ license = "MIT"
 readme = "README.md"
 homepage = "example.com"
 documentation = ""
-repository = "https://github.com/Mohamed-Kaizen/iwrok-test/"
+repository = "https://github.com/Mohamed-Kaizen/IWork-test/"
 keywords = ["iwrok_test"]
 
 [tool.poetry.dependencies]
