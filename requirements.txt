@@ -45,7 +45,7 @@ oauthlib==3.1.0
 psycopg2-binary==2.8.6
 pwned-passwords-django==1.4.1
 pycparser==2.20
-pyjwt==1.7.1
+pyjwt==2.4.0
 pyrsistent==0.17.3
 pytest-cov==2.10.1
 pytest-django-queries==1.1.0
